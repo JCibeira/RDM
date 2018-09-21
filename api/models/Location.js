@@ -28,11 +28,6 @@ module.exports = {
 	idZone: {
 		model: 'zone'
 	}, 
-
-	directions: {
-		collection: 'direction',
-		via: 'idLocation'
-	}
 	
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -41,7 +36,12 @@ module.exports = {
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+	//  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+	
+	directions: {
+		collection: 'direction',
+		via: 'idLocation'
+	}
 
   },
 
