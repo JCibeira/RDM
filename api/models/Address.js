@@ -1,5 +1,5 @@
 /**
- * Location.js
+ * Direction.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -13,22 +13,22 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    longitude: {
+    name: {
       type: 'string',
       required: true,
+      unique: true,
       maxLength: 200
     },
-
-    latitude: {
+    
+    description: {
       type: 'string',
-      required: true,
-      maxLength: 200
+      maxLength: 500
     },
 
-    idZone: {
-      model: 'zone'
-    }, 
-	
+    idLocation: {
+      model: 'location'
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -36,12 +36,11 @@ module.exports = {
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-	//  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-	
-	addresses: {
-		collection: 'address',
-		via: 'idLocation'
-	}
+    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+
+    disposer: {
+      model: 'Disposer'
+    }
 
   },
 

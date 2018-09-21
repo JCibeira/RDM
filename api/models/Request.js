@@ -1,5 +1,5 @@
 /**
- * Direction.js
+ * Request.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -13,21 +13,26 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    name: {
-		type: 'string',
-		required: true,
-		unique: true,
-		maxLength: 200
-	},
-	
-	description: {
-		type: 'string',
-		maxLength: 500
-	},
+    status: {
+      type: 'string',
+      isIn: ['pending', 'confirmed', 'canceled', 'assigned'],
+      defaultsTo: 'pending',
+    },
 
-	idLocation: {
-		model: 'location'
-	}
+    amountToReplace: {
+      type: 'number',
+      columnType: 'integer'
+    },
+
+    amountToCollect: {
+      type: 'number',
+      columnType: 'integer'
+    },
+
+    confirmed: {
+      type: 'boolean'
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -37,6 +42,10 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
+    disposer: {
+      model: 'Disposer'
+    }
   },
 
 };
+

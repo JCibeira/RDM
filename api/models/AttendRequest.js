@@ -28,14 +28,15 @@ module.exports = {
 		columnType: 'datetime'
 	},
 
-	calification: {
+	rating: {
 		type: 'number',
-
+		columnType: 'integer'
 	},
 
 	status: {
 		type: 'string',
-		
+		isIn: ['processing', 'completed', 'canceled'],
+		defaultsTo: 'processing'
 	},
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
@@ -47,14 +48,16 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
 	//  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 	
-	points: {
-		collection: 'point',
-		via: 'idZone'
+	idCollector: {
+		model: 'collector'
 	},
 
-	locations: {
-		collection: 'location',
-		via: 'idZone'
+	idRequest: {
+		model: 'request'
+	}, 
+
+	idAddress: {
+		model: 'address'
 	}
 
   },

@@ -16,9 +16,9 @@ module.exports = {
     name: {
       type: 'string',
       required: true,
-	  unique: true,
+	    unique: true,
       maxLength: 200
-	},
+	  },
 	
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -27,17 +27,17 @@ module.exports = {
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-	//  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 	
-	points: {
-		collection: 'point',
-		via: 'idZone'
-	},
+    points: {
+      collection: 'point',
+      via: 'idZone'
+    },
 
-	locations: {
-		collection: 'location',
-		via: 'idZone'
-	}
+    locations: {
+      collection: 'location',
+      via: 'idZone'
+    }
 
   },
 

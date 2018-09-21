@@ -19,15 +19,15 @@ module.exports = {
       maxLength: 200
     },
 
-	latitude: {
-		type: 'string',
-		required: true,
-		maxLength: 200
-	},
+    latitude: {
+      type: 'string',
+      required: true,
+      maxLength: 200
+    },
 
-	idZone: {
-		model: 'zone'
-	}
+    idZone: {
+      model: 'zone'
+    }
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
