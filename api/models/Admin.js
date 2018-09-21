@@ -1,5 +1,5 @@
 /**
- * UserRDM.js
+ * Admin.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -59,51 +59,14 @@ module.exports = {
       columnType: 'datetime'
     },
 
-    emailProofToken: {
+    lastSeenIp: {
       type: 'string',
-    },
-
-    emailProofTokenTime: {
-      type: 'string',
-      columnType: 'datetime'
-    },
-
-    emailStatus: {
-      type: 'boolean',
-      defaultsTo: false,
-    },
-
-    tosAcceptedByIp: {
-      type: 'string',
-      description: 'The IP (ipv4) address of the request that accepted the terms of service.',
-      extendedDescription: 'Useful for certain types of businesses and regulatory requirements (KYC, etc.)',
-      moreInfoUrl: 'https://en.wikipedia.org/wiki/Know_your_customer'
     },
 
     lastSeenAt: {
       type: 'string',
       columnType: 'datetime'
     },
-
-
-    //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
-    //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
-    //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
-
-    //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-    //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-
-    collector: {
-      collection:'Collector',
-      via: 'userRDM'
-    },
-
-    disposer: {
-      collection:'Disposer',
-      via: 'userRDM'
-    }
 
   },
 

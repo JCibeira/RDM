@@ -14,20 +14,21 @@ module.exports = {
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
     name: {
-		type: 'string',
-		required: true,
-		unique: true,
-		maxLength: 200
-	},
-	
-	description: {
-		type: 'string',
-		maxLength: 500
-	},
+      type: 'string',
+      required: true,
+      unique: true,
+      maxLength: 200
+    },
+    
+    description: {
+      type: 'string',
+      maxLength: 500
+    },
 
-	idLocation: {
-		model: 'location'
-	}
+    idLocation: {
+      model: 'location'
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -36,6 +37,10 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+
+    disposer: {
+      model: 'Disposer'
+    }
 
   },
 

@@ -1,5 +1,5 @@
 /**
- * Point.js
+ * Request.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -13,21 +13,26 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    longitude: {
+    status: {
       type: 'string',
-      required: true,
-      maxLength: 200
+      isIn: ['pending', 'confirmed', 'canceled', 'assigned'],
+      defaultsTo: 'pending',
     },
 
-    latitude: {
-      type: 'string',
-      required: true,
-      maxLength: 200
+    amountToReplace: {
+      type: 'number',
+      columnType: 'integer'
     },
 
-    idZone: {
-      model: 'zone'
-    }
+    amountToCollect: {
+      type: 'number',
+      columnType: 'integer'
+    },
+
+    confirmed: {
+      type: 'boolean'
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -37,6 +42,10 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
+    disposer: {
+      model: 'Disposer'
+    }
   },
 
 };
+
